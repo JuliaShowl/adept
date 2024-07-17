@@ -1,9 +1,10 @@
 from flask import Flask, request, json, jsonify
 from datetime import datetime
+import os
 
 app = Flask(__name__)
 
-with open("./data/jr_data.json", "r") as file:
+with open(os.path.dirname(os.path.realpath(__file__)) + "/data/jr_data.json", "r") as file:
     data = json.load(file)
 
 valid_statuses = ["In Draft", "In Review", "Pending Approval", "Complete"]
@@ -39,14 +40,14 @@ def update_status(id):
             current_status = json_statuses[d.get('status')]
             d['status'] = new_status
             d['lastEdited'] = datetime.today().strftime("%Y-%m-%d")
-            with open("./data/jr_data.json", "w", encoding='utf-8') as f:
+            with open(os.path.dirname(os.path.realpath(__file__)) + "/data/jr_data.json", "w", encoding='utf-8') as f:
                 json.dump(data, f, indent=2)
             
             stats = data['stats']
             new_status = json_statuses[new_status]
             stats[current_status] -= 1
             stats[new_status] += 1
-            with open("./data/jr_data.json", "w", encoding='utf-8') as f:
+            with open(os.path.dirname(os.path.realpath(__file__)) + "/data/jr_data.json", "w", encoding='utf-8') as f:
                 json.dump(data, f, indent=2)
             return jsonify({"message": "Update complete"}, 201)
         
