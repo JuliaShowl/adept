@@ -1,47 +1,47 @@
 {
-  "user": {
-    "id": 1,
-    "name": "John Doe",
-    "email": "john.doe@example.com",
-    "role": "Admin"
-  },
-  "stats": {
-    "totalDocuments": 5,
-    "inDraft": 1,
-    "inReview": 1,
-    "pendingApproval": 1,
-    "complete": 2
-  },
   "documents": [
     {
       "id": 1,
+      "lastEdited": "2024-07-17",
       "name": "Project Proposal",
-      "status": "In Review",
-      "lastEdited": "2024-06-10"
+      "status": "Complete"
     },
     {
       "id": 2,
+      "lastEdited": "2024-07-17",
       "name": "Quarterly Report",
-      "status": "Pending Approval",
-      "lastEdited": "2024-06-08"
+      "status": "Pending Approval"
     },
     {
       "id": 3,
+      "lastEdited": "2024-07-17",
       "name": "Marketing Plan",
-      "status": "In Draft",
-      "lastEdited": "2024-06-12"
+      "status": "Complete"
     },
     {
       "id": 4,
+      "lastEdited": "2024-07-17",
       "name": "Development Approach",
-      "status": "Complete",
-      "lastEdited": "2024-06-08"
+      "status": "Pending Approval"
     },
     {
       "id": 5,
+      "lastEdited": "2024-07-17",
       "name": "Personnel Overview",
-      "status": "Complete",
-      "lastEdited": "2024-06-04"
+      "status": "In Review"
     }
-  ]
+  ],
+  "stats": {
+    "complete": 2,
+    "inDraft": 0,
+    "inReview": 1,
+    "pendingApproval": 2,
+    "totalDocuments": 5
+  },
+  "user": {
+    "email": "john.doe@example.com",
+    "id": 1,
+    "name": "John Doe",
+    "role": "Admin"
+  }
 }

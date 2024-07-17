@@ -2,9 +2,9 @@ import React from 'react'
 
 const User = ({users}) => {
     return <div>
-        <div className="dropdown">
+        <div className='dropdown'>
             {users.name}
-            <div className="dropdown-content">
+            <div className='dropdown-content'>
                 {users.email}<br />
                 {users.role}
             </div>

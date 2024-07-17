@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Docs = ({docs}) => {
+const Docs = ({docs, updateStatus}) => {
     return <div>
         <table>
             <thead>
@@ -16,6 +16,7 @@ const Docs = ({docs}) => {
                         <td>{doc.name}</td>
                         <td>{doc.lastEdited}</td>
                         <td>{doc.status}</td>
+                        <td><button onClick={() => updateStatus(doc)}>Update Status</button></td>
                     </tr>
                 ))}
             </tbody>
