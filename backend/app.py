@@ -1,8 +1,10 @@
 from flask import Flask, request, json, jsonify
+from flask_cors import CORS
 from datetime import datetime
 import os
 
 app = Flask(__name__)
+CORS(app)
 
 with open(os.path.dirname(os.path.realpath(__file__)) + "/data/jr_data.json", "r") as file:
     data = json.load(file)
