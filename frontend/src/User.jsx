@@ -2,8 +2,13 @@ import React from 'react'
 
 const User = ({users}) => {
     return <div>
-        <h2>Welcome</h2>
-        {users.name}
+        <div className="dropdown">
+            {users.name}
+            <div className="dropdown-content">
+                {users.email}<br />
+                {users.role}
+            </div>
+        </div>
     </div>
 }
 
