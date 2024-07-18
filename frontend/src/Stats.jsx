@@ -2,12 +2,17 @@ import React from 'react'
 
 const Statistics = ({stats}) => {
     return <div>
-        Total Documents ({stats.totalDocuments}) 
-        In Draft ({stats.inDraft})
-        In Review ({stats.inReview})
-        Pending Approval ({stats.pendingApproval})
-        Complete ({stats.complete})
-
+        <table className='stats'>
+            <tbody>
+                <tr>
+                    <td>Total Documents ({stats.totalDocuments})</td>
+                    <td>In Draft ({stats.inDraft})</td>
+                    <td>In Review ({stats.inReview})</td>
+                    <td>Pending Approval ({stats.pendingApproval})</td>
+                    <td>Complete ({stats.complete})</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 }
 
