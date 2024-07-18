@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Docs = ({docs, updateStatus}) => {
-    return <div>
+    return <div data-testid='docs-component'>
         <table className='docs'>
             <thead>
                 <tr>

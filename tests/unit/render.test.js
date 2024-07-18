@@ -14,8 +14,15 @@ test('render user component', async () => {
 });
 
 test('render stats component', async () => {
-    const mockResponse = { data: { complete: 4, inREview: 2, inDraft: 3, pendingApproval: 2, totalDocuments: 13 } };
+    const mockResponse = { data: { complete: 4, inReview: 2, inDraft: 3, pendingApproval: 2, totalDocuments: 13 } };
     render(<Statistics stats={mockResponse}/>)
     const statsElement = screen.getByTestId('stats-component')
     expect(statsElement).toBeInTheDocument()
+});
+
+test('render docs component', async () => {
+    const mockResponse = [{ id: 1, lastEdited: '2023-06-20', status: 'In Review', name: 'Project Proposal' }];
+    render(<Docs docs={mockResponse}/>)
+    const docsElement = screen.getByTestId('docs-component')
+    expect(docsElement).toBeInTheDocument()
 });
