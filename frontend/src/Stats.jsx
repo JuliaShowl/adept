@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Statistics = ({stats}) => {
-    return <div>
+    return <div data-testid='stats-component'>
         <table className='stats'>
             <tbody>
                 <tr>

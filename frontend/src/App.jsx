@@ -10,7 +10,7 @@ function App() {
   const [stat, setStat] = useState([]);
   const [doc, setDoc] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentDoc, setCurrentDoc] = useState({})
+  const [currentDoc, setCurrentDoc] = useState([])
 
   useEffect(() => {
     fetchUser();
