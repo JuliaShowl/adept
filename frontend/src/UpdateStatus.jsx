@@ -32,7 +32,7 @@ const UpdateStatus = ({currentDoc = {}, updateCallback}) => {
     return (
     <form onSubmit={onSubmit}>
         <div>
-            <label>Choose status:</label>
+            <label>Choose status for <b>{currentDoc.name}</b>: </label>
             <select value={status} onChange={e => setStatus(e.target.value)}>
                 <option value="In Draft">In Draft</option>
                 <option value="In Review">In Review</option>
